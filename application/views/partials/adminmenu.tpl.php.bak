@@ -1,0 +1,290 @@
+<?php 
+        $active_url = $_SERVER['REQUEST_URI'];
+
+?>
+<ul class="nav" id="side-menu">
+    <?php if ($this->groups_access->have_access('admincms')) { ?>
+        <li>
+            <a  href="<?php echo base_url(SITE_ADMIN); ?>"><i
+                    class="fa fa-bar-chart-o fa-fw"></i> <?php echo $this->lang->line('ds_nav_dashboard'); ?></a>
+        </li>
+        <li>
+            <a data-active="<?php echo (stripos($active_url, 'server_sync')) !== FALSE ? 'active' : ''; ?>" 
+                href="<?php echo base_url(SITE_ADMIN . '/system/server_sync'); ?>"><i
+                    class="fa fa-bar-chart-o fa-fw"></i> <?php echo $this->lang->line('ds_nav_system_server'); ?>
+            </a>
+        </li>
+        <li>
+            <a  data-active="<?php echo (stripos($active_url, 'menus')) !== FALSE ? 'active' : ''; ?>" 
+                href="<?php echo base_url(SITE_ADMIN.'/menus'); ?>"><i
+                    class="fa fa-bar-chart-o fa-fw"></i> Menu</a>
+        </li>
+        <li>
+            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> <?php echo $this->lang->line('ds_nav_inventory'); ?><span
+                    class="fa arrow"></span></a>
+            <ul class="nav nav-second-level">
+                <li>
+                    <a  data-active="<?php echo (stripos($active_url, 'reprint_billings')) !== FALSE ? 'active' : ''; ?>"
+                        href="<?php echo base_url(SITE_ADMIN . '/reprint_billings'); ?>">Re-Print Billing</a>
+                </li>
+                <li>
+                    <a  data-active="<?php echo (stripos($active_url, 'stocklet')) !== FALSE ? 'active' : ''; ?>"
+                        href="<?php echo base_url(SITE_ADMIN . '/stock/stocklet'); ?>">Outlet Stock</a>
+                </li>
+                <li>
+                    <a  data-active="<?php echo (stripos($active_url, 'stock_transfer/request')) !== FALSE ? 'active' : ''; ?>"
+                        href="<?php echo base_url(SITE_ADMIN . '/stock_transfer/request'); ?>">Permintaan Transfer Stock</a>
+                </li>
+                <li>
+                    <a  data-active="<?php echo (stripos($active_url, 'stock_transfer/receive')) !== FALSE ? 'active' : ''; ?>"
+                        href="<?php echo base_url(SITE_ADMIN . '/stock_transfer/receive'); ?>">Penerimaan Transfer Stock</a>
+                </li>
+            </ul>
+            <!-- /.nav-second-level -->
+        </li>
+        <li>
+            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Purchase Order<span
+                    class="fa arrow"></span></a>
+            <ul class="nav nav-second-level">
+              
+                <li>
+                    <a  data-active="<?php echo (stripos($active_url, 'po_list')) !== FALSE ? 'active' : ''; ?>"
+                        href="<?php echo base_url(SITE_ADMIN . '/purchase_order/po_list'); ?>">Daftar Purchase Order</a>
+                </li>
+            </ul>
+            <!-- /.nav-second-level -->
+        </li> 
+        <li>
+            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Penerimaan Barang<span
+                    class="fa arrow"></span></a>
+            <ul class="nav nav-second-level">
+              
+                <li>
+                    <a  data-active="<?php echo (stripos($active_url, 'receive_stocks/listing')) !== FALSE ? 'active' : ''; ?>"
+                        href="<?php echo base_url(SITE_ADMIN . '/receive_stocks/listing'); ?>"> Daftar Penerimaan Barang</a>
+                </li>
+            </ul>
+            <!-- /.nav-second-level -->
+        </li>
+
+
+        <li>
+            <a 
+                href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Member<span
+                    class="fa arrow"></span></a>
+            <ul class="nav nav-second-level">
+                <li>
+                    <a 
+                         data-active="<?php echo (stripos($active_url, 'member')) !== FALSE ? 'active' : ''; ?>"
+                         href="<?php echo base_url(SITE_ADMIN . '/member/'); ?>">Daftar Member</a>
+                </li>
+                 <li>
+                    <a 
+                         data-active="<?php echo (stripos($active_url, 'order_company')) !== FALSE ? 'active' : ''; ?>"
+                         href="<?php echo base_url(SITE_ADMIN . '/order_company/'); ?>">Order Company</a>
+                </li>
+            </ul>
+            <!-- /.nav-second-level -->
+        </li>
+        <?php /*
+        <li>
+            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> <?php echo $this->lang->line('ds_nav_analytic'); ?>
+                <span
+                    class="fa arrow"></span></a>
+            <ul class="nav nav-second-level">
+                <li>
+                    <a href="<?php echo base_url(SITE_ADMIN . '/analytics/sales'); ?>"><?php echo $this->lang->line('ds_nav_analytic_sales'); ?></a>
+                </li>
+                <li>
+                    <a href="<?php echo base_url(SITE_ADMIN . '/analytics/table'); ?>"><?php echo $this->lang->line('ds_nav_analytic_table'); ?></a>
+                </li>
+                <li>
+                    <a href="<?php echo base_url(SITE_ADMIN . '/analytics/staff'); ?>"><?php echo $this->lang->line('ds_nav_report_staff'); ?></a>
+                </li>
+                 <li>
+                    <a href="<?php echo base_url(SITE_ADMIN . '/analytics/menu'); ?>"><?php echo $this->lang->line('ds_nav_analytic_menu'); ?></a>
+                </li>
+              </ul>
+        </li> */ ?>
+        <li>
+            <a  data-active="<?php echo (stripos($active_url, 'feature_settings')) !== FALSE ? 'active' : ''; ?>"
+                href="<?php echo base_url(SITE_ADMIN.'/feature_settings'); ?>"><i
+                    class="fa fa-bar-chart-o fa-fw"></i> Pengaturan Fitur</a>
+        </li>
+        <li>
+            <a  data-active="<?php echo (stripos($active_url, 'reservation')) !== FALSE ? 'active' : ''; ?>"
+                href="<?php echo base_url(SITE_ADMIN.'/reservation'); ?>"><i
+                    class="fa fa-bar-chart-o fa-fw"></i> Reservasi</a>
+        </li>
+        <li>
+            <a  data-active="<?php echo (stripos($active_url, 'delivery_costs')) !== FALSE ? 'active' : ''; ?>"
+                href="<?php echo base_url(SITE_ADMIN.'/delivery_costs'); ?>"><i
+                    class="fa fa-bar-chart-o fa-fw"></i> Ongkos Kirim</a>
+        </li>
+        <?php /*
+        <li>
+            <a  data-active="<?php echo (stripos($active_url, 'beginning_balances')) !== FALSE ? 'active' : ''; ?>"
+                href="<?php echo base_url(SITE_ADMIN.'/beginning_balances'); ?>"><i
+                    class="fa fa-bar-chart-o fa-fw"></i> Saldo Awal Akun</a>
+        </li>*/ ?>
+                <li>
+            <a  data-active="<?php echo (stripos($active_url, 'setting')) !== FALSE ? 'active' : ''; ?>"
+                href="<?php echo base_url(SITE_ADMIN . '/system/setting'); ?>"><i
+                class="fa fa-bar-chart-o fa-fw"></i> Pengaturan
+            </a>
+        </li>
+
+    
+        <li>
+            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> <?php echo $this->lang->line('ds_nav_report'); ?>
+                <span
+                    class="fa arrow"></span></a>
+            <ul class="nav nav-second-level">
+                <li>
+                    <a data-active="<?php echo (stripos($active_url, 'reprint_billings')) !== FALSE ? 'active' : ''; ?>"
+                        href="<?php echo base_url(SITE_ADMIN . '/reprint_billings'); ?>">Re-Print Billing</a>
+                </li>
+                <li>
+                    <a data-active="<?php echo (stripos($active_url, 'reports/transaction')) !== FALSE ? 'active' : ''; ?>"
+                        href="<?php echo base_url(SITE_ADMIN . '/reports/transaction'); ?>">Transaksi</a>
+                </li>
+
+                <li>
+                    <a data-active="<?php echo (stripos($active_url, 'reports/sales_category')) !== FALSE ? 'active' : ''; ?>"
+                        href="<?php echo base_url(SITE_ADMIN . '/reports/sales_category'); ?>">Penjualan Per Kategori</a>
+                </li>
+
+                <li>
+                    <a data-active="<?php echo (stripos($active_url, 'reports/sales_menu')) !== FALSE ? 'active' : ''; ?>"
+                        href="<?php echo base_url(SITE_ADMIN . '/reports/sales_menu'); ?>">Penjualan Per Menu</a>
+                </li>
+                <li>
+                    <a data-active="<?php echo (stripos($active_url, 'open_close')) !== FALSE ? 'active' : ''; ?>"
+                        href="<?php echo base_url(SITE_ADMIN . '/reports/open_close'); ?>">Open Close Kasir</a>
+                </li>
+                <li>
+                    <a data-active="<?php echo (stripos($active_url, 'void')) !== FALSE ? 'active' : ''; ?>"
+                        href="<?php echo base_url(SITE_ADMIN . '/reports/void'); ?>">Void</a>
+                </li>
+                <li>
+                    <a data-active="<?php echo (stripos($active_url, 'profit_lose')) !== FALSE ? 'active' : ''; ?>"
+                        href="<?php echo base_url(SITE_ADMIN . '/reports/profit_lose'); ?>">Untung/Rugi (Profit/Loss)</a>
+                </li> 
+                
+                </ul>
+        </li>  
+         
+    <?php } ?>
+
+     <?php if ($this->groups_access->have_access('hrd')) { ?>
+        <li>
+            <a  href="<?php echo base_url(SITE_ADMIN); ?>"><i
+                    class="fa fa-bar-chart-o fa-fw"></i> <?php echo $this->lang->line('ds_nav_dashboard'); ?></a>
+        </li>
+        <li> 
+            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Absensi
+                <span class="fa arrow"></span> 
+            </a>
+            <ul class="nav nav-second-level">
+                <li> <a  <a data-active="<?php echo (stripos($active_url, 'hrd_attendance')) !== FALSE ? 'active' : ''; ?>"
+                    href="<?php echo base_url(SITE_ADMIN . '/hrd_attendance'); ?>"> Daftar Absensi</a>  </li>
+                <li> <a data-active="<?php echo (stripos($active_url, 'hrd_schedule')) !== FALSE ? 'active' : ''; ?>"
+                    href="<?php echo base_url(SITE_ADMIN . '/hrd_schedule'); ?>"> Kelola Jadwal</a>  </li>
+            </ul>
+        </li>
+        <li> 
+            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>  Appraisal
+                <span class="fa arrow"></span> 
+            </a>
+            <ul class="nav nav-second-level">
+             <!--    <li> <a href="#">  Proses Appraisal</a>  </li>
+                <li> <a href="#"> Pending Appraisal</a>  </li> -->
+                <li> <a data-active="<?php echo (stripos($active_url, 'hrd_appraisal/setting_template')) !== FALSE ? 'active' : ''; ?>"
+                    href="<?php echo base_url(SITE_ADMIN . '/hrd_appraisal'); ?>">  Template Appraisal</a>  </li>
+               <!--  <li> <a data-active="<?php echo (stripos($active_url, 'due')) !== FALSE ? 'active' : ''; ?>"
+                    href="<?php echo base_url(SITE_ADMIN . '/hrd_appraisal/due_appraisal'); ?>"> Setting Hak Appraisal</a>  </li> -->
+                <li> <a data-active="<?php echo (stripos($active_url, 'process_appraisal')) !== FALSE ? 'active' : ''; ?>"
+                    href="<?php echo base_url(SITE_ADMIN . '/hrd_appraisal/process_appraisal'); ?>">  Proses Appraisal</a>  </li> 
+            </ul>
+        </li>
+        <li> 
+            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>  Audit 
+                <span class="fa arrow"></span> 
+            </a>
+            <ul class="nav nav-second-level">
+                <li> <a  data-active="<?php echo (stripos($active_url, 'hrd_audit/setting_audit')) !== FALSE ? 'active' : ''; ?>"
+                    href="<?php echo base_url(SITE_ADMIN . '/hrd_audit'); ?>">
+                     Setting Audit</a>  </li>
+                <li> <a data-active="<?php echo (stripos($active_url, 'process_audit')) !== FALSE ? 'active' : ''; ?>"
+                    href="<?php echo base_url(SITE_ADMIN . '/hrd_audit/process_audit'); ?>">  Proses Audit</a>  </li> 
+            </ul>
+        </li> 
+        <li> 
+            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>  Payroll
+                <span class="fa arrow"></span> 
+            </a>
+            <ul class="nav nav-second-level">
+                <li> <a data-active="<?php echo (stripos($active_url, 'hrd_payroll/slip')) !== FALSE ? 'active' : ''; ?>"
+                    href="<?php echo base_url(SITE_ADMIN . '/hrd_payroll/slip'); ?>"> Slip Gaji</a>  </li>
+                <li> <a href="#">   Saran Payroll</a>  </li> 
+            </ul>
+        </li>
+        <li> 
+            <a href="#"><i
+                    class="fa fa-bar-chart-o fa-fw"></i>  Pegawai
+                <span class="fa arrow"></span> 
+            </a>
+            <ul class="nav nav-second-level">
+                <li> <a data-active="<?php echo (stripos($active_url, 'hrd_staff')) !== FALSE ? 'active' : ''; ?>"
+                    href="<?php echo base_url(SITE_ADMIN . '/hrd_staff/staff_list'); ?>">   Data Pegawai</a>  </li>
+                <li> <a data-active="<?php echo (stripos($active_url, '/hrd_loan')) !== FALSE ? 'active' : ''; ?>"
+                    href="<?php echo base_url(SITE_ADMIN . '/hrd_loan'); ?>"> Pinjaman</a>  </li> 
+            </ul>
+        </li>
+        <li> 
+            <a href="#">  Recruitment</a>
+        </li>
+        <li> 
+            <a data-active="<?php echo (stripos($active_url, '/hrd_reimburse')) !== FALSE ? 'active' : ''; ?>"
+                    href="<?php echo base_url(SITE_ADMIN . '/hrd_reimburse'); ?>"> Reimburse</a>
+        </li>
+        <li> 
+            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>  Report
+              <span class="fa arrow"></span> 
+            </a>
+            <ul class="nav nav-second-level">
+                <li> <a data-active="<?php echo (stripos($active_url, '/hrd_report/report_attendance')) !== FALSE ? 'active' : ''; ?>"
+                    href="<?php echo base_url(SITE_ADMIN . '/hrd_report/report_attendance'); ?>">  Absensi</a>  </li>
+
+                <li> <a data-active="<?php echo (stripos($active_url, '/hrd_report/report_payroll')) !== FALSE ? 'active' : ''; ?>"
+                    href="<?php echo base_url(SITE_ADMIN . '/hrd_report/report_payroll'); ?>">   Gaji</a>  </li> 
+
+                <li> <a data-active="<?php echo (stripos($active_url, '/hrd_report/report_appraisal')) !== FALSE ? 'active' : ''; ?>"
+                    href="<?php echo base_url(SITE_ADMIN . '/hrd_report/report_appraisal'); ?>">  Appraisal</a>  </li> 
+            </ul>
+        </li>
+        <li> 
+            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>  Setting
+             <span class="fa arrow"></span> 
+            </a>
+            <ul class="nav nav-second-level">
+                <li> <a 
+                    data-active="<?php echo (stripos($active_url, 'hrd/setting_jobs_list')) !== FALSE ? 'active' : ''; ?>"
+                    href="<?php echo base_url(SITE_ADMIN . '/hrd/setting_jobs_list'); ?>">  Jabatan</a>  </li>
+                <li> <a 
+                    data-active="<?php echo (stripos($active_url, 'hrd/setting_office_hours')) !== FALSE ? 'active' : ''; ?>"
+                    href="<?php echo base_url(SITE_ADMIN . '/hrd/setting_office_hours'); ?>">   Template Jam Kerja</a>  </li> 
+                <li> <a 
+                    data-active="<?php echo (stripos($active_url, 'hrd/setting_employee_affair_list')) !== FALSE ? 'active' : ''; ?>"
+                    href="<?php echo base_url(SITE_ADMIN . '/hrd/setting_employee_affair_list'); ?>">  Status Kepegawaian</a>  </li> 
+                <li> <a   data-active="<?php echo (stripos($active_url, 'hrd/setting_salary_component_list')) !== FALSE ? 'active' : ''; ?>"
+                    href="<?php echo base_url(SITE_ADMIN . '/hrd/setting_salary_component_list'); ?>">  Komponen Gaji</a>  </li> 
+                <li><a 
+                    data-active="<?php echo (stripos($active_url, 'hrd/setting_memorandum')) !== FALSE ? 'active' : ''; ?>"
+                    href="<?php echo base_url(SITE_ADMIN . '/hrd/setting_memorandum'); ?>">   Surat Peringatan</a>  </li>  
+                <li> <a data-active="<?php echo (stripos($active_url, 'hrd_setting')) !== FALSE ? 'active' : ''; ?>"
+                    href="<?php echo base_url(SITE_ADMIN . '/hrd_setting'); ?>">  Setting Umum</a>  </li>  
+            </ul>
+        </li>
+     <?php } ?>
+</ul>
