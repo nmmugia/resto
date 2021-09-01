@@ -1,0 +1,47 @@
+.kitchen-panel {
+    padding: 10px 10px 10px;
+}
+
+.title-name-kitchen{
+	color:white;
+	text-transform:uppercase;
+	padding:10px;
+	border-bottom:1px solid #70D0EC;
+	margin:5px 0px;
+}
+
+.kitchen-table {
+    width: 100%;
+    color: #464646;
+	border:0;
+}
+
+.kitchen-table th {
+    text-align: center;
+    color: #fff;
+    background: #3c1f11;
+    font-weight:bold;
+    padding:5px 5px 5px 5px;
+}
+
+.kitchen-table td {
+    background: #fff;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.kitchen-table td {
+    padding:3px 15px 0px 15px;
+}
+
+.border-side-white {
+    border-right: 1px solid #e1e1e1;
+    border-left: 1px solid #e1e1e1;
+}
+
+.table-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    padding: 0 0 70px;
+    background-attachment: scroll;
+}

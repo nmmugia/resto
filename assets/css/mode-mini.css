@@ -1,0 +1,89 @@
+.table-mini .v-middle{
+    top: 20%;
+    left: 10%;
+}
+
+@media(max-width:991px){
+    .col-md-custom{
+        width:100%;
+        padding-left:15px;
+        padding-right:15px;
+        margin-top:15px;
+    }
+    .bill-theme-con {
+        height:600px !important;
+        margin-bottom:15px;
+    }
+}
+@media(max-width:1200px){
+    .margin-wrap{
+        margin:10px 0;
+    }
+    .order-wrapper{
+        padding-top:0;
+    }
+    .order-takeaway{
+        height:370px !important;
+    }
+    .slide-up{
+        right: 78px !important;
+        top: 38px !important;
+    }
+}
+@media(max-width:1200px){
+    .popup-order {
+        z-index: 5;
+        position: fixed;
+        width: 100% !important;
+        left: 50%;
+        top: 45%;
+        margin-left:-50%;
+    }
+    .order-menu-categories p, .menu-order p {
+        padding:0 15px 10px;
+    }
+    .dine-in-order {
+        display: block !important;
+        position:relative !important;
+        float:left !important;
+        text-align: center;
+        cursor: pointer;
+        border-radius: 0px !important;
+        margin: 0px 3px 3px 0px !important;
+        font-size: 10px;
+        width: calc(25% - 3px) !important;
+    }
+    .v-middle{
+        font-size: 25px !important;
+        text-align: center !important;
+        top: 39% !important;
+        left: 0% !important;
+    }
+    .label-rect-empty:after,.label-rect-select:after,.label-rect-waiting:after,.label-rect-cleaning:after,.label-rect-completed:after,.label-rect-reserved:after,.label-rect-order:after{
+        content:"" !important;
+    }
+    .label-circle-empty:after,.label-circle-select:after,.label-circle-waiting:after,.label-circle-cleaning:after,.label-circle-completed:after,.label-circle-reserved:after,.label-circle-order:after{
+        content:"" !important;
+    }
+    #popup-block-reservation-detail a{
+        width:100%;
+        margin-bottom: 5px;
+    }
+    #popup-block-reservation-detail .popup-panel{
+        padding:0px !important;
+    }
+    #popup-block-reservation-detail .title-name{
+        padding-top:0px !important;
+    }
+    .btn-close-reserv{
+        margin-top: 0px;
+        margin-bottom: 10px;
+    }
+    p.reservation-menu-title {
+        margin: 3px auto;
+    }
+    .slide-up{
+        right: 67px !important;
+        top: 18px !important;
+    }
+}
